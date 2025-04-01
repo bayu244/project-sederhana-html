@@ -1,0 +1,84 @@
+# Panduan Push Project ke GitHub
+
+## 1. Membuat Repository di GitHub
+Sebelum melakukan push, Anda perlu membuat repository di GitHub:
+
+1. Masuk ke akun GitHub Anda di [GitHub](https://github.com).
+2. Klik tombol **New** di pojok kanan atas untuk membuat repository baru.
+3. Isikan nama repository (misalnya **project-sederhana-html**).
+4. Pilih **Public** agar repository dapat diakses oleh orang lain (opsional, bisa juga **Private** jika ingin pribadi).
+5. Klik tombol **Create Repository**.
+
+---
+
+## 2. Menginisialisasi Git di Proyek Lokal
+Setelah repository dibuat, Anda perlu menyiapkan proyek Anda di komputer:
+
+1. Buka **Command Prompt (Windows)** atau **Terminal (Mac/Linux)**.
+2. Arahkan ke folder proyek dengan perintah:
+   ```sh
+   cd Desktop/project-sederhana-html
+   ```
+3. Inisialisasi folder proyek sebagai repository Git lokal:
+   ```sh
+   git init
+   ```
+
+---
+
+## 3. Menambahkan File ke Staging Area
+Sebelum melakukan commit, tambahkan file ke staging area:
+
+1. Tambahkan semua file di folder proyek ke staging area:
+   ```sh
+   git add .
+   ```
+2. Periksa status file untuk memastikan sudah berada di staging area:
+   ```sh
+   git status
+   ```
+
+---
+
+## 4. Melakukan Commit
+Commit digunakan untuk menyimpan perubahan yang telah dilakukan pada proyek:
+
+```sh
+ git commit -m "Menambahkan project pertama"
+```
+Pesan commit sebaiknya deskriptif agar mudah dipahami.
+
+---
+
+## 5. Menambahkan Remote Repository GitHub
+Agar repository lokal dapat terhubung dengan GitHub, lakukan langkah berikut:
+
+1. Salin URL repository GitHub yang sudah dibuat. URL biasanya seperti:
+   ```
+   https://github.com/username/project-sederhana-html.git
+   ```
+2. Tambahkan URL tersebut ke remote repository lokal:
+   ```sh
+   git remote add origin https://github.com/username/project-sederhana-html.git
+   ```
+
+---
+
+## 6. Push Project ke GitHub
+Untuk pertama kali melakukan push ke GitHub, gunakan perintah:
+
+Jika repository menggunakan branch **main**:
+```sh
+ git push -u origin main
+```
+Jika repository menggunakan branch **master**:
+```sh
+ git push -u origin master
+```
+
+Jika Git meminta login, gunakan **username GitHub** dan jika autentikasi dua faktor aktif, gunakan **Personal Access Token (PAT)** sebagai password.
+
+---
+
+## 7. Memverifikasi di GitHub
+Setelah melakukan push, buka GitHub dan masuk ke repository Anda. Pastikan semua file sudah terupload dengan benar.
